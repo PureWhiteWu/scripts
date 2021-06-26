@@ -7,7 +7,7 @@ if [ ! -d "$(dirname ${shadowsocks_rust_config})" ]; then
     mkdir -p $(dirname ${shadowsocks_rust_config})
 fi
 
-cp shadowsocks-rust-config ${shadowsocks_rust_config}
+cp shadowsocks-rust-config ${shadowsocks_rust_init}
 
 apt install -y gcc g++
 
@@ -40,3 +40,9 @@ EOF
 chmod +x ${shadowsocks_rust_init}
 service_name=$(basename ${shadowsocks_rust_init})
 update-rc.d -f "${service_name}" defaults
+
+cd ..
+rm -rf shadowsocks-rust
+rm -rf ~/.rustup/
+
+systemctl enable shadowsocks-rust
