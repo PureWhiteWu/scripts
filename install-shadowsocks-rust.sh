@@ -21,7 +21,7 @@ rustup default nightly
 
 export RUSTFLAGS="-C target-cpu=native"
 
-cargo build --release
+cargo build --release --features aead-cipher-2022-extra --bin ssserver
 
 cp target/release/ssserver /usr/local/bin
 
