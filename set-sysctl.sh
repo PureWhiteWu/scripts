@@ -32,9 +32,9 @@ net.ipv4.tcp_max_syn_backlog = 4096
 # max timewait sockets held by system simultaneously
 net.ipv4.tcp_max_tw_buckets = 5000
 # TCP receive buffer
-net.ipv4.tcp_rmem = 4096 87380 67108864
+net.ipv4.tcp_rmem = 16384 16777216 536870912
 # TCP write buffer
-net.ipv4.tcp_wmem = 4096 65536 67108864
+net.ipv4.tcp_wmem = 16384 16777216 536870912
 # turn on path MTU discovery
 net.ipv4.tcp_mtu_probing = 1
 
