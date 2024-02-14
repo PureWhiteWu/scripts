@@ -15,9 +15,9 @@ git clone https://github.com/shadowsocks/shadowsocks-rust.git
 
 cd shadowsocks-rust
 
-git checkout v1.17.2
+git checkout v1.18.0
 
-rustup default nightly
+# rustup default nightly
 
 export RUSTFLAGS="-C target-cpu=native"
 
