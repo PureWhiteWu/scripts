@@ -15,7 +15,7 @@ git clone https://github.com/shadowsocks/shadowsocks-rust.git
 
 cd shadowsocks-rust
 
-git checkout v1.18.0
+git checkout v1.22.0
 
 # rustup default nightly
 
