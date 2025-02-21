@@ -21,7 +21,7 @@ git checkout v1.22.0
 
 export RUSTFLAGS="-C target-cpu=native"
 
-cargo build --release --features aead-cipher-2022-extra --bin ssserver
+cargo build --release --features aead-cipher-2022-extra,mimalloc --bin ssserver
 
 cp target/release/ssserver /usr/local/bin
 
@@ -31,7 +31,7 @@ cat > ${shadowsocks_rust_config}<<-EOF
     "server_port":,
     "password":"",
     "timeout":300,
-    "method":"",
+    "method":"aes-128-gcm",
     "keep_alive": 15,
     "mode":"tcp_and_udp"
 }
